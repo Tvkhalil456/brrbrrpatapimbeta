@@ -204,3 +204,4 @@ int WINAPI wWinMain(HINSTANCE h,HINSTANCE p,PWSTR c,int n){
   GdiplusShutdown(t);
   return 0;
 }
+
