@@ -123,7 +123,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int)
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
     RegisterClass(&wc);
 
-    HWND hwnd = CreateWindow("MinecraftWindowClass", "Minecraft Clone",
+    HWND hwnd = CreateWindow("MinecraftWindowClass", "BRR BRR PATAPIM",
                              WS_POPUP | WS_VISIBLE,
                              0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN),
                              NULL, NULL, hInstance, NULL);
@@ -266,11 +266,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int)
     WNDCLASS wc = {};
     wc.lpfnWndProc = WndProc;
     wc.hInstance = hInstance;
-    wc.lpszClassName = "MinecraftWindowClass";
+    wc.lpszClassName = "PatapimWindowClass";
     wc.hCursor = LoadCursor(NULL, IDC_ARROW);
     RegisterClass(&wc);
 
-    HWND hwnd = CreateWindow("MinecraftWindowClass", "Minecraft Clone",
+    HWND hwnd = CreateWindow("PatapimWindowClass", "brr brr patapim",
                              WS_POPUP | WS_VISIBLE,
                              0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN),
                              NULL, NULL, hInstance, NULL);
