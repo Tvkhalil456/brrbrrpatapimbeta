@@ -1,4 +1,4 @@
-// Minecraft.cpp — version corrigée (sans compression, sans suppression de logique)
+// Minecraft.cpp — version corrigée (sans compression, sans suppression de logique) a
 
 #define NOMINMAX
 #define _WIN32_WINNT 0x0601
