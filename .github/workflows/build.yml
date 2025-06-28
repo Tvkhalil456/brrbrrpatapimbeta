@@ -1,24 +1,31 @@
-name: Build EXE
+name: Build Windows EXE
 
 on:
   push:
-    paths:
-      - '**.cpp'
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-    - name: Compile C++ file
+    - name: Install MinGW
+      uses: egor-tensin/setup-mingw@v2
+      with:
+        platform: x64
+
+    - name: Compile with g++
       run: |
-        g++ -o programme.exe *.cpp
+        g++ Minecraft.cpp ressource.o -o Minecraft.exe -lgdi32 -luser32 -lshell32 -lcomctl32 -lwinmm -lole32
 
-    - name: Upload EXE
+    - name: Upload executable
       uses: actions/upload-artifact@v4
       with:
-        name: programme
-        path: programme.exe
+        name: Minecraft-exe
+        path: Minecraft.exe
